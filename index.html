@@ -94,7 +94,17 @@
             return color;
         }
 
-        // Function to randomize placeholders and apply styles
+        // Function to generate a random ID or class
+        function getRandomString() {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let result = '';
+            for (let i = 0; i < 8; i++) {
+                result += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return result;
+        }
+
+        // Function to randomize placeholders, locators, and apply styles
         function applyRandomStyles() {
             // Get the username and password input elements
             const usernameInput = document.getElementById('username');
@@ -106,6 +116,24 @@
             // Randomize the placeholder text
             usernameInput.placeholder = usernamePlaceholders[Math.floor(Math.random() * usernamePlaceholders.length)];
             passwordInput.placeholder = passwordPlaceholders[Math.floor(Math.random() * passwordPlaceholders.length)];
+
+            // Randomize element locators (id and class)
+            const newUsernameId = getRandomString();
+            const newPasswordId = getRandomString();
+            const newButtonId = getRandomString();
+            const newUsernameClass = getRandomString();
+            const newPasswordClass = getRandomString();
+
+            // Update the id and class of elements
+            usernameInput.id = newUsernameId;
+            passwordInput.id = newPasswordId;
+            usernameInput.className = newUsernameClass;
+            passwordInput.className = newPasswordClass;
+            loginButton.id = newButtonId;
+
+            // Update the "for" attributes of labels to match new IDs
+            usernameLabel.setAttribute('for', newUsernameId);
+            passwordLabel.setAttribute('for', newPasswordId);
 
             // Random styles for the inputs and button
             usernameInput.style.borderColor = getRandomColor();
