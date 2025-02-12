@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Styles Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    // Function to generate random colors
+    function getRandomColor() {
+      const letters = '0123456789ABCDEF';
+      let color = '#';
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      return color;
+    }
+
+    // Function to generate random font size
+    function getRandomFontSize() {
+      return Math.floor(Math.random() * 5 + 14) + "px";
+    }
+
+    // Function to generate random border radius
+    function getRandomBorderRadius() {
+      return Math.floor(Math.random() * 15 + 5) + "px";
+    }
+
+    // Function to randomize placeholder text
+    function getRandomPlaceholderText() {
+      const placeholders = [
+        "Enter username",
+        "Your name here",
+        "Type your username",
+        "Username please",
+        "Who are you?"
+      ];
+      return placeholders[Math.floor(Math.random() * placeholders.length)];
+    }
+
+    // Function to randomize button text
+    function getRandomButtonText() {
+      const buttonTexts = [
+        "Login",
+        "Sign In",
+        "Access Account",
+        "Enter",
+        "Let Me In"
+      ];
+      return buttonTexts[Math.floor(Math.random() * buttonTexts.length)];
+    }
+
+    // Function to apply random styles and text
+    function applyRandomStyles() {
+      const container = document.querySelector('.login-container');
+      const inputs = document.querySelectorAll('input');
+      const button = document.querySelector('button');
+
+      // Apply random background color to container
+      container.style.backgroundColor = getRandomColor();
+      
+      // Apply random styles to input fields
+      inputs.forEach(input => {
+        input.style.fontSize = getRandomFontSize();
+        input.style.borderRadius = getRandomBorderRadius();
+        input.style.borderColor = getRandomColor();
+        input.placeholder = getRandomPlaceholderText();  // Randomize placeholder text
+      });
+
+      // Apply random styles to button
+      button.style.backgroundColor = getRandomColor();
+      button.style.fontSize = getRandomFontSize();
+      button.style.borderRadius = getRandomBorderRadius();
+      button.textContent = getRandomButtonText();  // Randomize button text
+    }
+
+    // Call the applyRandomStyles function when the page loads
+    window.onload = applyRandomStyles;
+
+    // Handle the login form submission (just a mockup)
+    document.getElementById('loginForm').onsubmit = function(event) {
+      event.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      
+      if (username === "admin" && password === "password") {
+        alert('Login successful!');
+      } else {
+        alert('Invalid credentials, please try again.');
+      }
+    };
+  </script>
+
+</body>
+</html>
