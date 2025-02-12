@@ -77,11 +77,16 @@
     <script>
         // Arrays with random placeholder options for username and password
         const usernamePlaceholders = [
-            "Enter your username", "Your username", "Username here", "User ID", "Enter email"
+            "Enter your username", "Your username", "Username here", "User ID", "Enter email","accountid","id","signinid"
         ];
         
         const passwordPlaceholders = [
-            "Enter your password", "Password here", "Secure password", "Enter secret key", "Your password"
+            "Enter your password", "Password here", "Secure password", "Enter secret key", "Your password","pwd","secret"
+        ];
+
+        // Arrays with random text options for the login button
+        const buttonTexts = [
+            "Login", "Sign In", "Access Account", "Log In Now", "Submit","Go"
         ];
 
         // Function to get a random color
@@ -134,6 +139,9 @@
             // Update the "for" attributes of labels to match new IDs
             usernameLabel.setAttribute('for', newUsernameId);
             passwordLabel.setAttribute('for', newPasswordId);
+
+            // Randomize button text
+            loginButton.textContent = buttonTexts[Math.floor(Math.random() * buttonTexts.length)];
 
             // Random styles for the inputs and button
             usernameInput.style.borderColor = getRandomColor();
