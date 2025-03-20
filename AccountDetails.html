@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .account-details {
+            margin: 20px 0;
+        }
+
+        .account-details div {
+            margin-bottom: 15px;
+        }
+
+        .account-details label {
+            font-weight: bold;
+            display: inline-block;
+            width: 120px;
+        }
+
+        .account-details span {
+            font-size: 1.1em;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin: 5px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .logout-button {
+            background-color: #dc3545;
+        }
+
+        .logout-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Account Details</h1>
+        
+        <div class="account-details">
+            <div>
+                <label for="name">Full Name:</label>
+                <span id="name">John Doe</span>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <span id="email">johndoe@example.com</span>
+            </div>
+            <div>
+                <label for="balance">Account Balance:</label>
+                <span id="balance">$1,250.00</span>
+            </div>
+            <div>
+                <label for="membership">Membership Status:</label>
+                <span id="membership">Premium</span>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <a href="#" class="button">Edit Account</a>
+            <a href="#" class="button logout-button">Logout</a>
+        </div>
+    </div>
+
+</body>
+</html>

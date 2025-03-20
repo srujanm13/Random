@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 50px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .product-details {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .product-image {
+            width: 40%;
+            text-align: center;
+        }
+
+        .product-info {
+            width: 55%;
+        }
+
+        .product-info h2 {
+            color: #333;
+        }
+
+        .product-info p {
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .price {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        .availability {
+            font-size: 1.1em;
+            color: #17a2b8;
+        }
+
+        .button-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Product Details</h1>
+        
+        <div class="product-details">
+            <div class="product-image">
+                <img src="https://img.thecdn.in/278008/1693218002667_SKU-0916_1.jpg?width=600&format=webp" alt="Product Image" style="width: 100%; max-width: 300px; border-radius: 8px;">
+            </div>
+
+            <div class="product-info">
+                <h2>Wireless Bluetooth Headphones</h2>
+                <p>The latest wireless Bluetooth headphones with noise cancellation, perfect for music lovers and frequent travelers.</p>
+                <p class="price">$129.99</p>
+                <p class="availability">Availability: In Stock</p>
+                <p>Free shipping on all orders over $50. 30-day return policy.</p>
+
+                <div class="button-container">
+                    <a href="#" class="button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
